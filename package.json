@@ -1,0 +1,15 @@
+{
+  "name": "interview",
+  "version": "1.0.0",
+  "description": "General Instructions:\r • API response should be in Json format with appropriate status code.\r • Use the status code 200 series for successful data insert or successful partial data insert.\r • User the status code 300 series for wrong data insert, incorrect data insert or validation errors.\r • Example 200 and 300 status codes:\r {\r  \"code\": 200,\r  \"msg\": \"city name inserted \"\r }\r {\r  \"code\": 300,\r  \"msg\": \"city name contains numeric characters\"\r }\r ## Primary Task Starts ##\r Step 1: POST API with City Route\r • Post API should have only 1 (one) parameter city.\r • Insert city name in the city table (model).\r • City name should be unique.\r • City name should allow only Alphabets in upper/ small case.\r • City name should not allow numeric/ special characters.\r • Once city name is inserted, provide the response via status codes.\r Step 2: GET API with City List Route\r • Provide the List of Cities available from Database in Json object.\r Step 3: Consume 3rd Party API\r • Run this API https://api.binance.com/api/v1/time\r • Console the Output in terminal\r Step 4: POST API with User Route\r • Post API should have 2 (three) mandatory parameters name and city.\r • Post API should have 2 (two) optional parameters mobile and media url.\r • Post API should have 1(one) invisible (server side) parameter ID.\r • ID parameter should take the value of Step 3, Output servertime.\r • Name parameter should allow only Alphabets in upper/ small case.\r • Name parameter should not allow numeric/ special characters.\r • City parameter should accept only city names available in database.\r • Mobile parameter should allow only numeric characters.\r • Media url parameter should allow string with https:// only.\r • Once the user details have been inserted, provide the response via status codes along with \r inserted user details and ID.\r Note: ID must not be passed via API. It should be taken by Node.js script whenever the data is inserted.\r Step 5: GET API with User List Route\r • Provide the List of Users available from Database in Json object along with ID.\r Step 6: PATCH/ POST API with User Modify Route\r • PATCH/ POST API should allow modification of user data based on unique variable of ID.\r • PATCH/ POST API should allow modification of name, city, mobile and media url parameters. \r • Once the user details have been modified, provide the response via status codes along with \r modified user details.\r Note: ID should not be updated in any case.\r ## Primary Task Ends ##\r ## Bonus (Optional) Task Starts ##\r Bonus Step 1: EJs Display\r • Display the user data from API using EJs\r • Allow user data modification via API using EJs\r ## Bonus (Optional) Task Ends #",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^6.8.1"
+  }
+}
